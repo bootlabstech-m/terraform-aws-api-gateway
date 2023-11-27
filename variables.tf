@@ -1,7 +1,7 @@
 variable "region" {
     type = string
 }
-variable "api_name" {
+variable "name" {
     type = string
     description = "this is the name of rest api "
 }
