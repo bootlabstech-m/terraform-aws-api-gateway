@@ -4,10 +4,12 @@
 
 variable "api_type" {
   description = "Specifies the type of API Gateway to create. Supported values are REST (API Gateway v1) and HTTP (API Gateway v2)."
+
   type = string
+
   validation {
     condition     = contains(["REST", "HTTP"], upper(var.api_type))
-    error_message = "api_type must be either REST or HTTP."
+    error_message = "The api_type value must be either REST or HTTP."
   }
 }
 
